@@ -4,7 +4,12 @@ const port = 3000;
 const appUrl = `http://localhost:${port}/`;
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  const responseData = {
+    message: "Benvenuti nel mio Blog",
+    success: true
+  }
+
+  res.status(200).json(responseData)
 });
 
 app.listen(port, () => {
